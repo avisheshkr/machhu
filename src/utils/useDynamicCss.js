@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 
 const useDynamicCSSImport = () => {
+  const urlToCssMap = {
+    // Add more URL-CSS mappings as needed
+    "machhu.netlify.app": "netlify.css",
+  };
+
   useEffect(() => {
     // Get the current URL
     const currentURL = window.location.hostname;
     console.log(currentURL);
-
-    const urlToCssMap = {
-      // Add more URL-CSS mappings as needed
-      "machhu.netlify.app": "netlify.css",
-    };
 
     // Get the corresponding CSS file based on the URL
     const cssFile = urlToCssMap[currentURL] || "default.css"; // Default CSS if no match found
