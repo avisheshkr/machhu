@@ -7,9 +7,17 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import MobileMenu from "./components/MobileMenu";
 import Emergency from "./components/Emergency";
+import useDynamicCSSImport from "./utils/useDynamicCss";
 
 const App = () => {
   const [show, setShow] = useState(false);
+
+  const urlToCssMap = {
+    // Add more URL-CSS mappings as needed
+    "machhu.netlify.app": "netlify.css",
+  };
+
+  useDynamicCSSImport(urlToCssMap);
 
   const showCloseMenu = () => {
     setShow(!show);

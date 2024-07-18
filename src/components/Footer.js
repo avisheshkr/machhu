@@ -11,7 +11,7 @@ const Footer = () => {
   }, []);
   return (
     <>
-      <Container>
+      <Container className="footer-bg-color">
         <LogoContainer data-aos="fade-up" data-aos-duration="1500">
           <span>Machhu.</span>
         </LogoContainer>
@@ -66,7 +66,7 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.div`
-  background: #f56058;
+  // background: #f56058;
   display: flex;
   align-items: center;
   padding: 8rem 10rem;
