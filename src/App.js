@@ -12,12 +12,7 @@ import useDynamicCSSImport from "./utils/useDynamicCss";
 const App = () => {
   const [show, setShow] = useState(false);
 
-  const urlToCssMap = {
-    // Add more URL-CSS mappings as needed
-    "machhu.netlify.app": "netlify.css",
-  };
-
-  useDynamicCSSImport(urlToCssMap);
+  useDynamicCSSImport();
 
   const showCloseMenu = () => {
     setShow(!show);
